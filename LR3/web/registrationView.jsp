@@ -13,7 +13,6 @@
 <p style="color: red;">${errorRegistrationMessage}</p>
 
 <form method="POST" action="${pageContext.request.contextPath}/registration">
-    <input type="hidden" name="redirectId" value="${param.redirectId}" />
     <table border="0">
         <tr>
             <td>LoginPassword</td>
