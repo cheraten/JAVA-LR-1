@@ -20,19 +20,10 @@ public class LoginHashEntity {
         return login;
     }
 
-    public void setName(String name) {
-        this.login = name;
-    }
-
     public String getHash() {
         return hash;
     }
 
-    public void setHash(String password) {
-        this.hash = hash;
-    }
-
-    @Override
     public String toString() {
         return "||  login=" + login +
                 "   ;   hash=" + hash +
