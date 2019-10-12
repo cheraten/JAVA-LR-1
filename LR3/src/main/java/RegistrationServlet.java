@@ -1,3 +1,9 @@
+//import DAO.LoginPasswordDAO;
+//import entity.LoginPasswordEntity;
+
+import DAO.LoginPasswordDAO;
+import entity.LoginPasswordEntity;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

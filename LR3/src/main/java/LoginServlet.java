@@ -1,3 +1,13 @@
+//import DAO.LoginHashDAO;
+//import DAO.LoginPasswordDAO;
+//import entity.LoginHashEntity;
+//import entity.LoginPasswordEntity;
+
+import DAO.LoginHashDAO;
+import DAO.LoginPasswordDAO;
+import entity.LoginHashEntity;
+import entity.LoginPasswordEntity;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
@@ -51,11 +61,6 @@ public class LoginServlet extends HttpServlet {
                 request.setAttribute("loginedUserName", loginedUserName);
                 List<LoginPasswordEntity> usersList = dao.findAll();
                 request.setAttribute("usersList", usersList);
-
-                //response.sendRedirect("login/userInfoView.jsp");
-                //RequestDispatcher dispatcher //
-                //    = this.getServletContext().getRequestDispatcher("/userInfoView.jsp");
-                //dispatcher.forward(request, response);
 
                 request.getRequestDispatcher("userInfoView.jsp").forward(request, response);
             } else {

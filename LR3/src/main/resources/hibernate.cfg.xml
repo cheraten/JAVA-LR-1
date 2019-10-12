@@ -16,8 +16,8 @@
         <property name="hibernate.connection.useUnicode">true</property>
         <property name="show_sql">true</property>
 
-        <mapping class="LoginPasswordEntity"/>
-        <mapping class="LoginHashEntity"/>
+        <mapping class="entity.LoginPasswordEntity"/>
+        <mapping class="entity.LoginHashEntity"/>
 
 
 
