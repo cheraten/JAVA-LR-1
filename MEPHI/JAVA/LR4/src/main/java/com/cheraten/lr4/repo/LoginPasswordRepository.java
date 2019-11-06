@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+@Repository("loginPasswordRepository")
 public interface LoginPasswordRepository extends JpaRepository<LoginPassword, Long> {
     LoginPassword findByLogin(String login);
 }

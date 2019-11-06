@@ -16,10 +16,9 @@ import java.util.List;
 public class MainController {
 
     @Autowired
-    LoginPasswordRepository loginPasswordRepository;
-    @Autowired
     LoginPasswordService loginPasswordService;
 
+    /*
     @GetMapping("/create")
     public ModelAndView create() {
         loginPasswordRepository.save(new LoginPassword("user1", "123"));
@@ -38,6 +37,16 @@ public class MainController {
         modelAndView.addObject("users", users);
         return modelAndView;
     }
+    */
+
+    @RequestMapping("/list")
+    public ModelAndView homeGet() {
+
+        List<LoginPassword> users = (List<LoginPassword>) loginPasswordService.findAll();
+        ModelAndView modelAndView = new ModelAndView("hello.jsp");
+        modelAndView.addObject("users", users);
+        return modelAndView;
+    }
 
     @RequestMapping(value="/registration", method = RequestMethod.GET)
     public ModelAndView registration(){
@@ -47,9 +56,6 @@ public class MainController {
 
         modelAndView.setViewName("registration.jsp");
 
-        loginPassword.toString();
-        List<LoginPassword> users = (List<LoginPassword>) loginPasswordRepository.findAll();
-        modelAndView.addObject(users);
         return modelAndView;
     }
 

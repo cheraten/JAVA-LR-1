@@ -1,7 +1,7 @@
 package com.cheraten.lr4.model;
 
 import lombok.Data;
-import org.hibernate.validator.constraints.Length;
+import javax.validation.constraints.NotEmpty;
 import javax.persistence.*;
 
 @Data
