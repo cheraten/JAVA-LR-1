@@ -5,6 +5,7 @@ import com.cheraten.lr4.repo.LoginPasswordRepository;
 
 import com.cheraten.lr4.service.LoginPasswordService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
@@ -18,17 +19,15 @@ public class MainController {
     @Autowired
     LoginPasswordService loginPasswordService;
 
-    /*
     @GetMapping("/create")
     public ModelAndView create() {
-        loginPasswordRepository.save(new LoginPassword("user1", "123"));
+        loginPasswordService.saveLoginPassword(new LoginPassword("user1", "123"));
 
-        List<LoginPassword> users = (List<LoginPassword>) loginPasswordRepository.findAll();
         ModelAndView modelAndView = new ModelAndView("hello.jsp");
-        modelAndView.addObject("users", users);
         return modelAndView;
     }
 
+    /*
     @RequestMapping("/hello")
     public ModelAndView homeGet() {
 
@@ -52,21 +51,21 @@ public class MainController {
     public ModelAndView registration(){
         ModelAndView modelAndView = new ModelAndView();
         LoginPassword loginPassword = new LoginPassword();
-        modelAndView.addObject("user", loginPassword);
 
         modelAndView.setViewName("registration.jsp");
+
+        modelAndView.addObject("loginPassword", loginPassword);
 
         return modelAndView;
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
-    public ModelAndView createNewUser(LoginPassword loginPassword) {
+    public ModelAndView createNewUser(@ModelAttribute LoginPassword loginPassword) {
         ModelAndView modelAndView = new ModelAndView();
 
         System.out.println(loginPassword.getLogin());
 
         loginPasswordService.saveLoginPassword(loginPassword);
-        modelAndView.addObject("successMessage", "User has been registered successfully");
         modelAndView.addObject("loginPassword", new LoginPassword());
 
         modelAndView.setViewName("registration.jsp");

@@ -11,7 +11,7 @@ public class LoginPassword {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private Long id;
+    private int id;
     @Column(name = "login")
     private String login;
     @Column(name = "password")
@@ -31,6 +31,14 @@ public class LoginPassword {
 
     public String getPassword() {
         return password;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String toString() {
