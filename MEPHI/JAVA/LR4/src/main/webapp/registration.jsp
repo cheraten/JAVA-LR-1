@@ -1,17 +1,23 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
-    <title>Form</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
+    <title>Reg</title>
 </head>
 <body>
-<h3>Registration</h3>
-<form action="#" th:action="@{/registration}" th:object="${loginPassword}" method="post">
-    <p>Login: <input type="text" th:field="*{login}" /></p>
-    <p>Password: <input type="text" th:field="*{password}" /></p>
-    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-</form>
+<form:form method="POST" action="registration" modelAttribute="loginPassword">
+    <form:label path="login">
+    <p>login:
+    </form:label>
+    <form:input path="login"/>
+    </p>
+    <form:label path="password">
+    <p>password:
+    </form:label>
+    <form:input path="password"/>
+    </p>
+    <input type="submit" name="submit" value="GO!">
+</form:form>
 </body>
 </html>

@@ -1,6 +1,8 @@
 package com.cheraten.lr4.model;
 
 import lombok.Data;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
 import javax.validation.constraints.NotEmpty;
 import javax.persistence.*;
 
@@ -18,6 +20,11 @@ public class LoginPassword {
     private String password;
 
     public LoginPassword() {
+    }
+
+    @ModelAttribute("loginPassword")
+    public LoginPassword getLoginPassword(){
+        return new LoginPassword();
     }
 
     public LoginPassword(String login, String password) {
