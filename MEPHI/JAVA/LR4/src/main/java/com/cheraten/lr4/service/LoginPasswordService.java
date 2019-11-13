@@ -19,8 +19,12 @@ public class LoginPasswordService {
         this.loginPasswordRepository = loginPasswordRepository;
     }
 
-    public LoginPassword findUserByLogin(String login) {
+    public LoginPassword findByLogin(String login) {
         return loginPasswordRepository.findByLogin(login);
+    }
+
+    public boolean existsByLogin(String login) {
+        return loginPasswordRepository.existsByLogin(login);
     }
 
     public void saveLoginPassword(LoginPassword loginPassword) {

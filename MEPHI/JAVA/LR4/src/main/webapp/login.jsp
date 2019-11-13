@@ -3,13 +3,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Registration</title>
+    <title>Login</title>
 </head>
 <body>
 <jsp:include page="menu.jsp"></jsp:include>
 
-<h3>Registration Page</h3>
-<form:form method="POST" action="registration" modelAttribute="loginPassword">
+<h3>Login Page</h3>
+
+<form:form method="POST" action="login" modelAttribute="loginPassword">
     <tr>
         <form:label path="login">
         <p>login:
@@ -24,7 +25,8 @@
         </p> </tr>
     <input type="submit" name="submit" value="GO!">
 </form:form>
-<p style="color: #ff0200;">${regError}</p>
-<p style="color: #0306ff;">${regMessage}</p>
+<p style="color: #ff0200;">${authError}</p>
+<p style="color: #ff0200;">${notContainError}</p>
+</div>
 </body>
 </html>

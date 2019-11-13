@@ -3,9 +3,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Users Info</title>
 </head>
 <body>
+<p style="color: #000000;">The list of registered users:</p>
 ${users}
 </body>
 </html>

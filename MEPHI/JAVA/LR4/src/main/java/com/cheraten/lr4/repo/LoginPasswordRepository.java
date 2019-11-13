@@ -9,4 +9,5 @@ import java.util.List;
 @Repository("loginPasswordRepository")
 public interface LoginPasswordRepository extends JpaRepository<LoginPassword, Long> {
     LoginPassword findByLogin(String login);
+    boolean existsByLogin(String login);
 }
