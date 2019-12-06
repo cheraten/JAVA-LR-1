@@ -1,0 +1,87 @@
+body{
+    background-image: url("https://wallpaperaccess.com/full/1353274.jpg");
+}
+p{
+    color: #000000;
+    font-size: 16px;
+}
+
+a{
+    font-size: 20px;
+}
+
+.container{
+    background-image: url("http://pcabc.ru/w9x/W9X_html_m317d866e.png");
+    background-size: 100%;
+    justify-content: center;
+    width: 386px;
+    height: 225px;
+    background-color: rgba(24, 33, 52, 0.7);
+    margin: 50px auto 0 auto;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
+    padding-bottom: 10px;
+    border-radius: 0px;
+}
+
+.container img {
+    max-width: 100%;
+}
+
+input[type="text"],input[type="password"]{
+    width: 300px;
+    height: 30px;
+    font-size: 18px;
+    margin: 70px 10px -10px 10px;
+    padding-left: 10px;
+    border-radius: 0px;
+}
+
+.submit {
+    background-image: url("https://sun9-54.userapi.com/c856032/v856032381/18df3e/-kVWFkAFq6k.jpg");
+    background-size: 100%;
+    margin: 45px 10px 45px 10px;
+    width: 75px;
+    height: 27px;
+}
+
+.header {
+    height: 200px;
+    width: 100%;
+    display:block;
+    margin: 5px auto auto auto;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.head {
+    text-align: center;
+    justify-content: center;
+    align-self: flex-start;
+}
+.menu {
+    max-width: 200px;
+    max-height: 40px;
+    align-self: flex-start;
+}
+.menu .item{
+    margin: 30px auto auto auto;
+    max-width: 40px;
+    max-height: 40px;
+    overflow: hidden;
+    transition: flex 0.3s ease;
+    cursor: pointer;
+    background-image: url("https://sun9-48.userapi.com/c857528/v857528151/115419/k_soF-crtAk.jpg");
+    box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
+}
+.menu .item:hover {
+    max-width: 200px;
+    max-height: 100px;
+    flex: 0.0001 1 75px;
+    transition-delay: 0.3s;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
